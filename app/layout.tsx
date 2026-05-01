@@ -1,6 +1,6 @@
-// app/layout.tsx
-import { Metadata } from 'next';
+import { Metadata } from "next";
 import "./globals.css";
+import Provider from "@/providers/Provider";
 
 export const metadata: Metadata = {
   title: "The Laundryroom CD | Fresh Clothes, Happy Life – Long Beach Blvd",
@@ -55,7 +55,7 @@ export default function RootLayout({
             `,
           }}
         />
-        {children}
+        <Provider>{children}</Provider>
       </body>
     </html>
   );

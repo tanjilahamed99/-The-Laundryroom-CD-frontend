@@ -411,7 +411,7 @@ export default function Pricing() {
                     className={`relative w-full py-4 rounded-2xl font-bold text-sm transition-all duration-500 overflow-hidden group/btn ${
                       plan.highlight
                         ? "bg-white text-primary-dark hover:shadow-2xl"
-                        : "bg-gradient-to-r from-primary to-primary-dark text-white"
+                        : "bg-linear-to-r from-primary to-primary-dark text-white"
                     }`}
                     style={{
                       transform: hoveredCard === i ? "scale-105" : "scale-100",
@@ -420,19 +420,33 @@ export default function Pricing() {
                           ? "0 20px 40px rgba(0,0,0,0.15)"
                           : "none",
                     }}>
-                    <span className="relative z-10 flex items-center justify-center gap-2 transition-all duration-300">
-                      {plan.highlight
-                        ? "Get Started Now"
-                        : plan.name === "Business Plan"
-                          ? "Contact Sales"
-                          : "Choose Plan"}
-                      <ArrowRight
-                        size={16}
-                        className={`transition-all duration-300 ${
-                          hoveredCard === i ? "translate-x-1" : ""
-                        }`}
-                      />
-                    </span>
+                    {plan.highlight ? (
+                      <>
+                        <span className="relative z-10 flex items-center button justify-center gap-2 transition-all duration-300">
+                          Get Started Now
+                          <ArrowRight
+                            size={16}
+                            className={`transition-all duration-300 ${
+                              hoveredCard === i ? "translate-x-1" : ""
+                            }`}
+                          />
+                        </span>
+                      </>
+                    ) : (
+                      <>
+                        <span className="relative z-10 flex text-black items-center justify-center gap-2 transition-all duration-300">
+                          {plan.name === "Business Plan"
+                            ? "Contact Sales"
+                            : "Choose Plan"}
+                          <ArrowRight
+                            size={16}
+                            className={`transition-all duration-300 ${
+                              hoveredCard === i ? "translate-x-1" : ""
+                            }`}
+                          />
+                        </span>
+                      </>
+                    )}
 
                     {/* Button Hover Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>

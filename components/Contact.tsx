@@ -11,6 +11,7 @@ const hours = [
 
 export default function Contact() {
   const { ref } = useReveal();
+  const address = "5210 Long Beach Blvd, Long Beach, CA 90805";
 
   return (
     <section
@@ -76,12 +77,12 @@ export default function Contact() {
                   Address
                 </p>
                 <p className="text-sm" style={{ color: "rgba(10,37,64,0.58)" }}>
-                  815 W Britton Rd
+                  5210 Long Beach Blvd, Long Beach,
                   <br />
-                  Oklahoma City, OK 73114
+                  CA 90805, United States
                 </p>
                 <a
-                  href="https://maps.google.com/?q=815+W+Britton+Rd,+Oklahoma+City,+OK+73114"
+                  href={`https://maps.google.com/?q=${encodeURIComponent(address)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs font-semibold mt-1 inline-block hover:underline"
@@ -105,10 +106,10 @@ export default function Contact() {
                   Phone
                 </p>
                 <a
-                  href="tel:+14057488990"
+                  href="tel:+15623805780"
                   className="font-bold text-lg hover:underline transition-colors"
                   style={{ color: "var(--primary)" }}>
-                  +1 405-748-8990
+                  +15623805780
                 </a>
                 <p
                   className="text-xs mt-0.5"
@@ -132,10 +133,10 @@ export default function Contact() {
                   Email
                 </p>
                 <a
-                  href="mailto:hello@bubbleslaundromat.com"
+                  href="mailto:laundryroomcd@gmail.com"
                   className="text-sm font-medium hover:underline"
                   style={{ color: "var(--primary)" }}>
-                  hello@bubbleslaundromat.com
+                  laundryroomcd@gmail.com
                 </a>
               </div>
             </div>
@@ -169,18 +170,18 @@ export default function Contact() {
             </div>
 
             <a
-              href="tel:+14057488990"
+              href="tel:+15623805780"
               className="btn-primary w-full text-white py-4 rounded-2xl font-bold text-base flex items-center justify-center gap-2 shadow-xl">
               <span>
                 <Phone size={18} className="inline mr-2" />
-                Call Now — +1 405-748-8990
+                Call Now — +15623805780
               </span>
             </a>
           </div>
 
           {/* Map */}
           <div
-            className="reveal rounded-3xl overflow-hidden shadow-2xl h-[520px]"
+            className="reveal rounded-3xl overflow-hidden shadow-2xl h-130"
             style={{ border: "1px solid var(--primary-ghost)" }}>
             <GoggleMap />
           </div>

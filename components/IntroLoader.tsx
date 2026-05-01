@@ -52,7 +52,7 @@ export default function IntroLoader({ done }: any) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
               className="mt-8 text-4xl md:text-5xl font-bold text-white">
-              Bubbles Laundromat
+              The Laundryroom CD
             </motion.h1>
 
             {/* Subtitle */}
@@ -63,19 +63,6 @@ export default function IntroLoader({ done }: any) {
               className="mt-3 text-white tracking-[4px] uppercase text-sm">
               Fresh • Fast • Reliable
             </motion.p>
-
-            {/* Progress */}
-            {/* <div className="w-52 h-[6px] bg-white/25 rounded-full mx-auto mt-7 overflow-hidden">
-              <motion.div
-                initial={{ x: "-100%" }}
-                animate={{ x: "0%" }}
-                transition={{
-                  duration: 2.6,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="h-full bg-white rounded-full"
-              />
-            </div> */}
           </div>
         </motion.div>
       )}

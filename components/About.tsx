@@ -32,12 +32,12 @@ export default function About() {
                   style={{ color: "var(--primary)" }}>Our Story</span>
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight mb-6"
                 style={{ color: "var(--deep)" }}>
-              Oklahoma City&apos;s{" "}
+              Long Beach Blvd City&apos;s{" "}
               <span className="gradient-text">Most Trusted</span>{" "}
-              Laundromat
+              Laundryroom
             </h2>
             <p className="leading-relaxed mb-4" style={{ color: "rgba(10,37,64,0.62)" }}>
-              Founded in 2012, Bubbles Laundromat has been a cornerstone of the Britton Rd community.
+              Founded in 2012, The Laundryroom CD has been a cornerstone of the Britton Rd community.
               We started with a simple mission: give Oklahoma City families a clean, safe, and affordable
               place to do their laundry.
             </p>

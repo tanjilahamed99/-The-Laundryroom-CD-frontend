@@ -3,14 +3,15 @@ import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import logo from "@/assets/bubbles-logo2.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
+  { label: "Home", href: "/" },
   { label: "Services", href: "#services" },
-  { label: "How It Works", href: "#how-it-works" },
+  { label: "Pick Up & Delivery", href: "/pick-up-delivery" },
   { label: "Pricing", href: "#pricing" },
   { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -40,19 +41,24 @@ export default function Navbar() {
               style={{ background: "var(--primary)" }}
             />
             <span className="text-white text-lg font-bold font-display relative z-10">
-              <Image src={logo} alt="image not found" height={100} width={100}/>
+              <Image
+                src={logo}
+                alt="image not found"
+                height={100}
+                width={100}
+              />
             </span>
           </div>
           <div>
             <span
               className="font-display font-bold text-xl leading-tight block"
               style={{ color: "var(--deep)" }}>
-              Bubbles
+              The Laundryroom
             </span>
             <span
               className="text-xs tracking-[0.2em] uppercase font-medium"
               style={{ color: "var(--primary)" }}>
-              Laundromat
+              CD
             </span>
           </div>
         </a>
@@ -61,7 +67,7 @@ export default function Navbar() {
         <ul className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 className="nav-link text-sm font-medium pb-1 transition-colors"
                 style={{ color: "rgba(10,37,64,0.72)" }}
@@ -72,7 +78,7 @@ export default function Navbar() {
                   (e.currentTarget.style.color = "rgba(10,37,64,0.72)")
                 }>
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -80,7 +86,7 @@ export default function Navbar() {
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="tel:+14057488990"
+            href="tel:++15623805780"
             className="flex items-center gap-2 text-sm font-semibold transition-colors"
             style={{ color: "var(--primary)" }}
             onMouseEnter={(e) =>
@@ -90,12 +96,12 @@ export default function Navbar() {
               (e.currentTarget.style.color = "var(--primary)")
             }>
             <Phone size={15} className="animate-pulse" />
-            +1 405-748-8990
+            +15623805780
           </a>
           <a
             href="#contact"
             className="btn-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg">
-            <span>Book Now</span>
+            <span>Schedule Pickup</span>
           </a>
         </div>
 

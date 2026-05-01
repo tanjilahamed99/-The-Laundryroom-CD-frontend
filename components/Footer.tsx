@@ -56,20 +56,19 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-display font-bold text-xl block leading-tight">
-                  Bubbles
+                  The Laundryroom
                 </span>
                 <span
                   className="text-xs tracking-[0.2em] uppercase"
                   style={{ color: "var(--primary)" }}>
-                  Laundromat
+                  CD
                 </span>
               </div>
             </div>
             <p
               className="text-sm leading-relaxed"
               style={{ color: "rgba(255,255,255,0.52)" }}>
-              Oklahoma City&apos;s most loved laundromat since 2012. Fresh
-              clothes, happy life.
+              5210 Long Beach Blvd, Long Beach, CA 90805, United States
             </p>
           </div>
 
@@ -113,7 +112,7 @@ export default function Footer() {
                 ["Home", "#home"],
                 ["About", "#about"],
                 ["Pricing", "#pricing"],
-                ["How It Works", "#how-it-works"],
+                ["Pick Up & Delivery", "/pick-up-delivery"],
                 ["Contact", "#contact"],
               ].map(([label, href]) => (
                 <li key={label}>
@@ -145,9 +144,9 @@ export default function Footer() {
                 <span
                   className="text-sm"
                   style={{ color: "rgba(255,255,255,0.60)" }}>
-                  815 W Britton Rd
+                  5210 Long Beach Blvd,
                   <br />
-                  Oklahoma City, OK 73114
+                  Long Beach, CA 90805, United States
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
@@ -157,10 +156,10 @@ export default function Footer() {
                   style={{ color: "var(--primary)" }}
                 />
                 <a
-                  href="tel:+14057488990"
+                  href="tel:+15623805780"
                   className="footer-link text-sm"
                   style={{ color: "rgba(255,255,255,0.60)" }}>
-                  +1 405-748-8990
+                  +15623805780
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
@@ -170,10 +169,10 @@ export default function Footer() {
                   style={{ color: "var(--primary)" }}
                 />
                 <a
-                  href="mailto:hello@bubbleslaundromat.com"
+                  href="mailto:laundryroomcd@gmail.com"
                   className="footer-link text-sm"
                   style={{ color: "rgba(255,255,255,0.60)" }}>
-                  hello@bubbleslaundromat.com
+                  laundryroomcd@gmail.com
                 </a>
               </li>
             </ul>
@@ -184,7 +183,7 @@ export default function Footer() {
           className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4"
           style={{ borderTop: "1px solid rgba(255,255,255,0.10)" }}>
           <p className="text-sm" style={{ color: "rgba(255,255,255,0.32)" }}>
-            © {new Date().getFullYear()} Bubbles Laundromat. All rights
+            © {new Date().getFullYear()} The Laundryroom CD. All rights
             reserved.
           </p>
           <div className="flex gap-6">
