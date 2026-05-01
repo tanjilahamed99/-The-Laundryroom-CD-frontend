@@ -7,10 +7,10 @@ import Link from "next/link";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "#services" },
+  { label: "Services", href: "/#services" },
   { label: "Pick Up & Delivery", href: "/pick-up-delivery" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "About", href: "#about" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "About", href: "/#about" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -29,7 +29,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "nav-scrolled" : "bg-transparent"}`}>
       <div className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2.5 group">
+        <Link href="/" className="flex items-center gap-2.5 group">
           <div
             className="logo-bubble relative w-10 h-10 rounded-full flex items-center justify-center shadow-lg"
             style={{
@@ -61,7 +61,7 @@ export default function Navbar() {
               CD
             </span>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <ul className="hidden lg:flex items-center gap-7">
@@ -85,7 +85,7 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <a
+          <Link
             href="tel:++15623805780"
             className="flex items-center gap-2 text-sm font-semibold transition-colors"
             style={{ color: "var(--primary)" }}
@@ -97,12 +97,12 @@ export default function Navbar() {
             }>
             <Phone size={15} className="animate-pulse" />
             +15623805780
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            href="/pick-up-delivery"
             className="btn-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg">
             <span>Schedule Pickup</span>
-          </a>
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -122,7 +122,7 @@ export default function Navbar() {
           className="glass px-5 py-6 flex flex-col gap-4"
           style={{ borderTop: "1px solid var(--primary-ghost)" }}>
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
@@ -138,10 +138,10 @@ export default function Navbar() {
                 (e.currentTarget.style.color = "var(--deep)")
               }>
               {link.label}
-            </a>
+            </Link>
           ))}
           <a
-            href="tel:+14057488990"
+            href="tel:+15623805780"
             className="btn-primary text-white text-center py-3 rounded-full font-semibold mt-2">
             <span>📞 Call Now</span>
           </a>

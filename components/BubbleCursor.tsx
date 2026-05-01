@@ -45,7 +45,6 @@ export default function BubbleCursor() {
 
     // Handle mouse click (desktop)
     const handleClick = (e: MouseEvent) => {
-      console.log("Click event fired at:", e.clientX, e.clientY);
       spawnMultipleBubbles(e.clientX, e.clientY, 8);
     };
 
