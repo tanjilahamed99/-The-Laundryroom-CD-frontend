@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { useReveal } from "@/lib/useReveal";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 const plans = [
   {
@@ -407,50 +408,51 @@ export default function Pricing() {
                   </div>
 
                   {/* Premium CTA Button with text hover effect */}
-                  <button
-                    className={`relative w-full py-4 rounded-2xl font-bold text-sm transition-all duration-500 overflow-hidden group/btn ${
-                      plan.highlight
-                        ? "bg-white text-primary-dark hover:shadow-2xl"
-                        : "bg-linear-to-r from-primary to-primary-dark text-white"
-                    }`}
-                    style={{
-                      transform: hoveredCard === i ? "scale-105" : "scale-100",
-                      boxShadow:
-                        plan.highlight && hoveredCard === i
-                          ? "0 20px 40px rgba(0,0,0,0.15)"
-                          : "none",
-                    }}>
-                    {plan.highlight ? (
-                      <>
-                        <span className="relative z-10 flex items-center button justify-center gap-2 transition-all duration-300">
-                          Get Started Now
-                          <ArrowRight
-                            size={16}
-                            className={`transition-all duration-300 ${
-                              hoveredCard === i ? "translate-x-1" : ""
-                            }`}
-                          />
-                        </span>
-                      </>
-                    ) : (
-                      <>
-                        <span className="relative z-10 flex text-black items-center justify-center gap-2 transition-all duration-300">
-                          {plan.name === "Business Plan"
-                            ? "Contact Sales"
-                            : "Choose Plan"}
-                          <ArrowRight
-                            size={16}
-                            className={`transition-all duration-300 ${
-                              hoveredCard === i ? "translate-x-1" : ""
-                            }`}
-                          />
-                        </span>
-                      </>
-                    )}
+                  <Link href={"/pick-up-delivery#book"}>
+                    <button
+                      className={`relative w-full py-4 rounded-2xl font-bold text-sm transition-all duration-500 overflow-hidden group/btn ${
+                        plan.highlight
+                          ? "bg-white text-primary-dark hover:shadow-2xl"
+                          : "bg-linear-to-r from-primary to-primary-dark text-white"
+                      }`}
+                      style={{
+                        transform:
+                          hoveredCard === i ? "scale-105" : "scale-100",
+                        boxShadow:
+                          plan.highlight && hoveredCard === i
+                            ? "0 20px 40px rgba(0,0,0,0.15)"
+                            : "none",
+                      }}>
+                      {plan.highlight ? (
+                        <>
+                          <span className="relative z-10 flex items-center button justify-center gap-2 transition-all duration-300">
+                            Contact Us
+                            <ArrowRight
+                              size={16}
+                              className={`transition-all duration-300 ${
+                                hoveredCard === i ? "translate-x-1" : ""
+                              }`}
+                            />
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <span className="relative z-10 flex text-black items-center justify-center gap-2 transition-all duration-300">
+                            Contact Us
+                            <ArrowRight
+                              size={16}
+                              className={`transition-all duration-300 ${
+                                hoveredCard === i ? "translate-x-1" : ""
+                              }`}
+                            />
+                          </span>
+                        </>
+                      )}
 
-                    {/* Button Hover Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
-                  </button>
+                      {/* Button Hover Effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
+                    </button>
+                  </Link>
 
                   {/* Extra Perk for Highlight Card */}
                   {plan.highlight && (

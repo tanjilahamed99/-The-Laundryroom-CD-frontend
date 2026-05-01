@@ -99,7 +99,7 @@ export default function Navbar() {
             +15623805780
           </Link>
           <Link
-            href="/pick-up-delivery"
+            href="/pick-up-delivery#book"
             className="btn-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg">
             <span>Schedule Pickup</span>
           </Link>
